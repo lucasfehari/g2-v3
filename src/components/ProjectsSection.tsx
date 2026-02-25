@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 
+import logo4D from '../assets/logo4D.png';
+
 const projects = [
     { id: '01', title: 'Campanhas de Alta Conversão', desc: 'Estratégias full-funnel com ROI comprovado e otimização em tempo real.' },
     { id: '02', title: 'Branding & Posicionamento', desc: 'Construção de marcas memoráveis que dominam o share of mind do mercado.' },
@@ -21,7 +23,7 @@ export function ProjectsSection() {
                     {/* Middle Column (Image) */}
                     <div className="relative h-[800px] flex items-center justify-center order-first lg:order-none mb-12 lg:mb-0">
                         <img
-                            src="src/assets/logo4D.png"
+                            src={logo4D}
                             alt="Projetos 3D"
                             className="h-auto w-full "
                             referrerPolicy="no-referrer"

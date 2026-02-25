@@ -1,14 +1,17 @@
 import { motion } from 'motion/react';
 
+import rdStationLogo from '../assets/rd-station.svg';
+import activeCampaignLogo from '../assets/activecampaign.png';
+
 const partners = [
     { name: "Google Ads", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
     { name: "Meta Business", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
     { name: "TikTok Ads", logo: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" },
     { name: "HubSpot", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" },
     { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" },
-    { name: "RD Station", logo: "src/assets/rd-station.svg" },
+    { name: "RD Station", logo: rdStationLogo },
     { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" },
-    { name: "ActiveCampaign", logo: "src/assets/activecampaign.png" }
+    { name: "ActiveCampaign", logo: activeCampaignLogo }
 ];
 
 export function StrategicPartners() {

@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 
+import bgVideo from '../assets/BACKG2.mp4';
+
 export function Hero() {
     return (
         <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
@@ -19,7 +21,7 @@ export function Hero() {
                         className="w-full h-full relative"
                     >
                         {/* User: Replace this img with your <video autoPlay muted loop playsInline src="..." /> */}
-                        <video className=' opacity-40 md:opacity-100 filter-opacity-50 w-full h-full object-cover ' autoPlay muted loop playsInline src="src/assets/BACKG2.mp4" />
+                        <video className=' opacity-40 md:opacity-100 filter-opacity-50 w-full h-full object-cover ' autoPlay muted loop playsInline src={bgVideo} />
                         {/* Dynamic light leaks */}
                         <motion.div
                             animate={{

@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { UserCheck, ShieldCheck, Zap, Target, TrendingUp, MessageSquare, Share2, MousePointer2 } from 'lucide-react';
 
+import bgfounder from '../assets/bgfounder.png';
+import angelo from '../assets/angelo.png';
+
 export function FounderGrowth() {
     const pillars = [
         {
@@ -85,7 +88,7 @@ export function FounderGrowth() {
 
                     </motion.div>
                     {/* Background Image behind the photo */}
-                    <img src="src/assets/bgfounder.png" className='absolute -inset-10 w-[calc(100%+30rem)] h-[calc(100%+30rem)] object-contain opacity-30 z-[-1]' alt="Background Shape" />
+                    <img src={bgfounder} className='absolute -inset-10 w-[calc(100%+30rem)] h-[calc(100%+30rem)] object-contain opacity-30 z-[-1]' alt="Background Shape" />
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -103,7 +106,7 @@ export function FounderGrowth() {
                         <div className="relative aspect-[4/5] md:aspect-[3/4] squircle-lg overflow-hidden border border-white/10 group">
 
                             <img
-                                src="src/assets/angelo.png"
+                                src={angelo}
                                 alt="Founder"
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                                 referrerPolicy="no-referrer"
