@@ -90,9 +90,14 @@ export function TechPerformance() {
                         <p className="text-white/80 text-sm">
                             Sua operação digital rodando sem falhas, 24/7.
                         </p>
-                        <button className="mt-4 px-6 py-3 bg-black text-white squircle-full font-bold text-sm hover:bg-black/80 transition-colors">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 px-6 py-3 bg-black text-white squircle-full font-bold text-sm hover:bg-black/80 transition-colors inline-block"
+                        >
                             Solicitar Auditoria Tech
-                        </button>
+                        </a>
                     </motion.div>
                 </div>
             </div>

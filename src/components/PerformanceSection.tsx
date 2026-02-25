@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Zap, Activity, Battery, Wind, Weight, Cpu } from 'lucide-react';
+import bgred from '../assets/bg-red.png';
 
 export function PerformanceSection() {
     return (
@@ -27,14 +28,14 @@ export function PerformanceSection() {
                         className="relative w-full md:w-96 h-48 squircle overflow-hidden border border-white/5"
                     >
                         <img
-                            src="https://picsum.photos/seed/tech/800/400"
+                            src={bgred}
                             alt="Performance Tech"
-                            className="object-cover w-full h-full opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
+                            className="object-contain w-full h-full opacity-100 grayscale hover:grayscale-0 transition-all duration-700"
                             referrerPolicy="no-referrer"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                         <div className="absolute bottom-4 left-4">
-                            <span className="text-[10px] font-mono text-mars-accent uppercase tracking-widest">G2 Infrastructure v3.0</span>
+                            <span className="text-[10px] font-mono text-mars-white uppercase tracking-widest">G2 Infrastructure v3.0</span>
                         </div>
                     </motion.div>
                 </div>

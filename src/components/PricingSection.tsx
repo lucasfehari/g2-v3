@@ -104,8 +104,8 @@ function PricingCard({ plan, index }: { plan: any, index: number, key?: string }
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 + 0.3 }}
             className={`relative squircle-lg p-8 flex flex-col h-full ${plan.highlighted
-                    ? 'bg-gradient-to-b from-[#111] to-[#050505] border border-mars-accent/30 shadow-[0_0_40px_rgba(193,0,0,0.1)] md:-translate-y-4'
-                    : 'bg-[#0a0a0a] border border-white/10'
+                ? 'bg-gradient-to-b from-[#111] to-[#050505] border border-mars-accent/30 shadow-[0_0_40px_rgba(193,0,0,0.1)] md:-translate-y-4'
+                : 'bg-[#0a0a0a] border border-white/10'
                 }`}
         >
             {plan.highlighted && (
@@ -135,14 +135,17 @@ function PricingCard({ plan, index }: { plan: any, index: number, key?: string }
                 ))}
             </ul>
 
-            <button
-                className={`w-full py-4 squircle-full font-medium transition-all duration-300 ${plan.highlighted
-                        ? 'bg-mars-accent text-white hover:bg-mars-accent/90 hover:shadow-[0_0_20px_rgba(193,0,0,0.3)]'
-                        : 'glass hover:bg-white/10 text-white'
+            <a
+                href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-4 squircle-full font-medium transition-all duration-300 text-center inline-block ${plan.highlighted
+                    ? 'bg-mars-accent text-white hover:bg-mars-accent/90 hover:shadow-[0_0_20px_rgba(193,0,0,0.3)]'
+                    : 'glass hover:bg-white/10 text-white'
                     }`}
             >
                 Selecionar Plano
-            </button>
+            </a>
         </motion.div>
     );
 }

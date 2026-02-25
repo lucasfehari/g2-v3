@@ -44,9 +44,14 @@ export function Header() {
                 </nav>
 
                 {/* Action Button */}
-                <button className="px-8 py-3 rounded-full bg-mars-accent text-white text-[11px] font-bold uppercase tracking-widest hover:bg-mars-accent/90 transition-all hover:shadow-[0_0_20px_rgba(193,0,0,0.4)] active:scale-95">
-                    Sign Up
-                </button>
+                <a
+                    href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3 rounded-full bg-mars-accent text-white text-[11px] font-bold uppercase tracking-widest hover:bg-mars-accent/90 transition-all hover:shadow-[0_0_20px_rgba(193,0,0,0.4)] active:scale-95 text-center inline-block"
+                >
+                    Fale Conosco
+                </a>
             </motion.div>
         </header>
     );

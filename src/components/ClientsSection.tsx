@@ -1,13 +1,16 @@
 import { motion } from 'motion/react';
 import { Hexagon, Triangle, Circle, Square, Diamond, Star } from 'lucide-react';
 
+import fehariLogo from '../assets/logoParceiros/fehari.svg';
+import luaazulLogo from '../assets/logoParceiros/logoluaazul.png';
+import bgred from '../assets/bg-red.png';
+
 const clients = [
-    { name: 'TechCorp', icon: Hexagon },
-    { name: 'Innovate', icon: Triangle },
-    { name: 'GlobalNet', icon: Circle },
-    { name: 'FutureX', icon: Square },
-    { name: 'Alpha', icon: Diamond },
-    { name: 'Omega', icon: Star },
+    { name: 'Nara PROD.' },
+    { name: 'Daive' },
+    { name: 'Fehari Studio', logo: fehariLogo },
+    { name: 'luaazul', logo: luaazulLogo },
+
 ];
 
 export function ClientsSection() {
@@ -15,9 +18,13 @@ export function ClientsSection() {
     const duplicatedClients = [...clients, ...clients, ...clients];
 
     return (
+
         <section className="py-24 px-6 bg-black text-white relative overflow-hidden border-y tui-line">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+                <img src={bgred} alt="" className="w-full h-full object-cover blur-sm" />
+            </div>
             {/* Background Glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(244,131,18,0.08)_0%,transparent_70%)] pointer-events-none" />
 
             <div className="container mx-auto max-w-7xl mb-16 relative z-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -30,8 +37,7 @@ export function ClientsSection() {
 
             <div className="relative w-full overflow-hidden flex">
                 {/* Gradient masks for smooth fade on edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
 
                 <motion.div
                     animate={{ x: ["0%", "-33.3333%"] }}
@@ -39,19 +45,30 @@ export function ClientsSection() {
                     className="flex items-center gap-6 px-3"
                 >
                     {duplicatedClients.map((client, i) => {
-                        const Icon = client.icon;
                         return (
                             <div
                                 key={i}
-                                className="flex-shrink-0 w-56 h-36 squircle glass flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-colors cursor-pointer relative overflow-hidden"
+                                className="flex-shrink-0 w-56 h-36   flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-colors cursor-pointer relative overflow-hidden"
                             >
                                 {/* Subtle hover glow inside the card */}
                                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                <Icon className="w-10 h-10 text-white/30 group-hover:text-mars-accent transition-colors duration-300 relative z-10" />
-                                <span className="text-xl font-semibold text-white/50 group-hover:text-white transition-colors duration-300 tracking-wide relative z-10">
-                                    {client.name}
-                                </span>
+                                {client.logo ? (
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className="h-16 w-auto max-w-[80%] object-contain opacity-50 group-hover:opacity-100 transition-all duration-300 relative z-10"
+                                    />
+                                ) : (
+                                    <>
+                                        {client.icon && (
+                                            <client.icon className="w-10 h-10 text-white/30 group-hover:text-mars-accent transition-colors duration-300 relative z-10" />
+                                        )}
+                                        <span className="text-xl font-semibold text-white/50 group-hover:text-white transition-colors duration-300 tracking-wide relative z-10">
+                                            {client.name}
+                                        </span>
+                                    </>
+                                )}
                             </div>
                         );
                     })}

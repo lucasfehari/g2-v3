@@ -62,13 +62,16 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-10">
-                            <motion.button
+                            <motion.a
+                                href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.02, backgroundColor: "#D10000" }}
                                 whileTap={{ scale: 0.98 }}
-                                className="px-14 py-6 rounded-full bg-mars-accent text-white font-bold text-[11px] uppercase tracking-[0.2em] shadow-2xl transition-all"
+                                className="px-14 py-6 text-center inline-block rounded-full bg-mars-accent text-white font-bold text-[11px] uppercase tracking-[0.2em] shadow-2xl transition-all"
                             >
-                                Discover More
-                            </motion.button>
+                                Fale Conosco
+                            </motion.a>
 
                             <motion.div
                                 whileHover={{ x: 5 }}
