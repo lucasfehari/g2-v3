@@ -3,46 +3,45 @@ import { Check } from 'lucide-react';
 
 const plans = [
     {
-        name: 'Starter',
+        name: 'ACELERAÇÃO DIGITAL & BRANDING',
         price: 'R$ 2.500',
         period: '/mês',
-        description: 'Ideal para marcas em estágio inicial buscando tração.',
+        description: 'Ideal para empresas que precisam validar sua oferta, construir autoridade e dominar os primeiros canais de aquisição.',
         features: [
-            'Gestão de Redes Sociais (2 canais)',
-            'Criação de Conteúdo (8 posts/mês)',
-            'Gestão de Tráfego (Até R$ 5k/mês)',
-            'Relatório Mensal',
-            'Suporte via Email',
+            'Arquitetura de Presença Digital (Site/Landing Page de Alta Conversão)',
+            'Gestão Estratégica de Redes Sociais (Foco em Conteúdo de Autoridade)',
+            'Setup e Gestão de Tráfego Pago (Até R$ 10k/ mês de investimento)',
+            'Definição de Brand Equity e Posicionamento de Mercado',
+            'Relatório Mensal de Performance e BI',
         ],
         highlighted: false,
     },
     {
-        name: 'Growth',
+        name: 'PERFORMANCE & ESCALA PREVISÍVEL',
         price: 'R$ 5.800',
         period: '/mês',
-        description: 'Para empresas prontas para escalar seus resultados.',
+        description: 'Para negócios com tração que buscam maximizar o ROI, reduzir o CAC e criar uma máquina de vendas previsível.',
         features: [
-            'Gestão de Redes Sociais (4 canais)',
-            'Criação de Conteúdo (15 posts/mês)',
-            'Gestão de Tráfego (Até R$ 20k/mês)',
-            'Estratégia de Inbound Marketing',
-            'Relatórios Quinzenais',
-            'Suporte via WhatsApp',
+            'Gestão Avançada de Tráfego Omnichannel (Até R$ 50k/mês de investimento)',
+            'Criação de Funis de Venda e Inbound Marketing Estratégico',
+            'Otimização de Conversão (CRO) em todo o ecossistema digital',
+            'Estratégia de Conteúdo para Retenção e LTV',
+            'Dashboards em Tempo Real e Análise Quinzenal',
         ],
         highlighted: true,
     },
     {
-        name: 'Enterprise',
+        name: 'CONSULTORIA-EXECUTÓRIA & GOVERNANÇA',
         price: 'Sob Consulta',
         period: '',
-        description: 'Soluções personalizadas para grandes operações.',
+        description: 'Soluções tailor-made para grandes operações que exigem blindagem de marca, dominação de mercado e inteligência de dados.',
         features: [
-            'Estratégia Full-Funnel Customizada',
-            'Squad Dedicado',
-            'Gestão de Tráfego Ilimitada',
-            'Automação de Marketing Avançada',
-            'Dashboards em Tempo Real',
-            'Consultoria Estratégica Semanal',
+            'Estratégia Full-Funnel Customizada (On & Off)',
+            'Consultoria Estratégica Semanal com Sócios da G2',
+            'Gestão de Tráfego Ilimitada e Blindagem de Contas',
+            'Automação de Marketing e CRM Avançado',
+            'Estruturação de Processos Comerciais e Playbook de Vendas',
+            'Squad Dedicado (Gestor, Copywriter, Designer, Analista)',
         ],
         highlighted: false,
     },
@@ -136,7 +135,7 @@ function PricingCard({ plan, index }: { plan: any, index: number, key?: string }
             </ul>
 
             <a
-                href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=556796956777&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full py-4 squircle-full font-medium transition-all duration-300 text-center inline-block ${plan.highlighted

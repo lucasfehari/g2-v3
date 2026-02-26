@@ -9,7 +9,7 @@ const clients = [
     { name: 'Nara PROD.' },
     { name: 'Daive' },
     { name: 'Fehari Studio', logo: fehariLogo },
-    { name: 'luaazul', logo: luaazulLogo },
+    { name: 'luaazul', logo: luaazulLogo, className: 'w-40 h-full brightness-0 invert' },
 
 ];
 
@@ -30,9 +30,6 @@ export function ClientsSection() {
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
                     Marcas que <span className="text-gradient-accent">Confiam</span> na G2
                 </h2>
-                <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                    Aceleramos o crescimento das empresas mais inovadoras do mercado.
-                </p>
             </div>
 
             <div className="relative w-full overflow-hidden flex">
@@ -57,7 +54,7 @@ export function ClientsSection() {
                                     <img
                                         src={client.logo}
                                         alt={client.name}
-                                        className="h-16 w-auto max-w-[80%] object-contain opacity-50 group-hover:opacity-100 transition-all duration-300 relative z-10"
+                                        className={`h-16 w-auto max-w-[80%] object-contain opacity-50 group-hover:opacity-100 transition-all duration-300 relative z-10 ${client.className}`}
                                     />
                                 ) : (
                                     <>

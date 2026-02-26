@@ -20,7 +20,7 @@ export default function App() {
             <Cursor />
             <Header />
             <Hero />
-            <Partners />
+            {/* <Partners /> */}
             <StrategicPartners />
             <FounderGrowth />
             <TechPerformance />

@@ -4,14 +4,14 @@ import rdStationLogo from '../assets/rd-station.svg';
 import activeCampaignLogo from '../assets/activecampaign.png';
 
 const partners = [
-    { name: "Google Ads", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-    { name: "Meta Business", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-    { name: "TikTok Ads", logo: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" },
-    { name: "HubSpot", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg" },
-    { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" },
-    { name: "RD Station", logo: rdStationLogo },
-    { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" },
-    { name: "ActiveCampaign", logo: activeCampaignLogo }
+    { name: "Google Ads", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg", className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "Meta Business", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg", className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "TikTok Ads", logo: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg", className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "HubSpot", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg", className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg", className: "saturate-0" },
+    { name: "RD Station", logo: rdStationLogo, className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "Shopify", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg", className: "saturate-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" },
+    { name: "ActiveCampaign", logo: activeCampaignLogo, className: "brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" }
 ];
 
 export function StrategicPartners() {
@@ -41,7 +41,7 @@ export function StrategicPartners() {
                                 <img
                                     src={partner.logo}
                                     alt={partner.name}
-                                    className="max-h-8 w-auto grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                    className={`max-h-10 w-auto ${partner.className}`}
                                     referrerPolicy="no-referrer"
                                 />
                             </motion.div>

@@ -21,11 +21,20 @@ export function Footer() {
                     </div>
 
                     <div>
+                        <h4 className="font-mono text-xs text-white/40 uppercase tracking-widest mb-6">Conecte-se</h4>
+                        <ul className="space-y-4 text-white/80">
+                            <li><a href="https://www.instagram.com/agencia_g2c/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/company/g2companyagencia/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.threads.net/@agencia_g2c" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Threads</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
                         <h4 className="font-mono text-xs text-white/40 uppercase tracking-widest mb-6">Legal</h4>
                         <ul className="space-y-4 text-white/80">
                             <li><a href="#" className="hover:text-white transition-colors">Privacidade</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Termos de Serviço</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
+                            <li><a href="mailto:contato@g2agencia.com.br" className="hover:text-white transition-colors">Contato</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,22 +1,24 @@
 import { motion } from 'motion/react';
 import { Award, ShieldCheck, CheckCircle, Star } from 'lucide-react';
-
+import sinaproLogo from '../assets/certificado-sinaproms.svg';
+import cenpLogo from '../assets/certificado-cenp.png';
+import rdstationLogo from '../assets/rd-station.svg';
 export function Certifications() {
     const certs = [
         {
-            name: "SEMPRE",
+            name: "CENP",
             desc: "Padrão de excelência em processos e atendimento estratégico.",
-            icon: ShieldCheck
+            logo: cenpLogo
         },
         {
             name: "RD Station",
             desc: "Parceiro certificado em Inbound Marketing e Automação.",
-            icon: CheckCircle
+            logo: rdstationLogo
         },
         {
-            name: "Cinepro",
+            name: "Sinapro MS",
             desc: "Certificação em produção de conteúdo audiovisual de alta performance.",
-            icon: Star
+            logo: sinaproLogo
         }
     ];
 
@@ -55,11 +57,8 @@ export function Certifications() {
                             transition={{ delay: i * 0.1 }}
                             className="p-10 squircle bg-[#0a0a0a] border border-white/10 flex flex-col items-center text-center gap-6 group hover:border-mars-accent/30 transition-all duration-500"
                         >
-                            <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-mars-accent/10 group-hover:border-mars-accent/30 transition-all">
-                                <cert.icon className="w-10 h-10 text-white/20 group-hover:text-mars-accent transition-colors" />
-                            </div>
+                            <img src={cert.logo} alt={cert.name} className="h-16 w-auto object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500" />
                             <div>
-                                <h3 className="text-2xl font-bold mb-3 tracking-tight">{cert.name}</h3>
                                 <p className="text-white/40 text-sm leading-relaxed">{cert.desc}</p>
                             </div>
                         </motion.div>

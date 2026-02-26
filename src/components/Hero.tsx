@@ -65,7 +65,7 @@ export function Hero() {
 
                         <div className="flex flex-wrap items-center gap-10">
                             <motion.a
-                                href="https://api.whatsapp.com/send/?phone=5567996709422&text&type=phone_number&app_absent=0"
+                                href="https://api.whatsapp.com/send/?phone=556796956777&text&type=phone_number&app_absent=0"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.02, backgroundColor: "#D10000" }}
