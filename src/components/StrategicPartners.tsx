@@ -16,7 +16,7 @@ const partners = [
 
 export function StrategicPartners() {
     return (
-        <section className="py-24 px-6 bg-[#050505] text-white relative border-y border-white/5">
+        <section id="parceiros" className="py-24 px-6 bg-[#050505] text-white relative border-y border-white/5">
             <div className="container mx-auto max-w-7xl">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                     <div className="max-w-md text-center lg:text-left">

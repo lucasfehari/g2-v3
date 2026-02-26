@@ -4,7 +4,7 @@ import bgVideo from '../assets/BACKG2.mp4';
 
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
+        <section id="inicio" className="relative min-h-screen flex items-center bg-black overflow-hidden">
             {/* Background Video / Animated Element Container */}
             <div className="absolute bottom-0 right-0 w-full lg:w-[70%] h-full z-0">
                 <div className="relative w-full h-full overflow-hidden">

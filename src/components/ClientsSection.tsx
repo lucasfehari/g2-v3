@@ -19,7 +19,7 @@ export function ClientsSection() {
 
     return (
 
-        <section className="py-24 px-6 bg-black text-white relative overflow-hidden border-y tui-line">
+        <section id="clientes" className="py-24 px-6 bg-black text-white relative overflow-hidden border-y tui-line">
             {/* Background Image */}
             <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
                 <img src={bgred} alt="" className="w-full h-full object-cover blur-sm" />
@@ -28,7 +28,7 @@ export function ClientsSection() {
 
             <div className="container mx-auto max-w-7xl mb-16 relative z-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                    Marcas que <span className="text-gradient-accent">Confiam</span> na G2
+                    Marcas que fazem parte da nossa <span className="text-gradient-accent">história</span>
                 </h2>
             </div>
 

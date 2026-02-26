@@ -21,7 +21,7 @@ export function DataSection() {
                             {[
                                 { label: "Leads Gerados (Mês)", value: "45.2K", mono: true },
                                 { label: "ROAS Médio Global", value: "8.4x", mono: true },
-                                { label: "Marcas Atendidas", value: "120+", mono: false }
+                                { label: "Marcas Atendidas", value: "+500mil", mono: false }
                             ].map((stat, i) => (
                                 <div key={i} className="flex items-center justify-between border-b tui-line pb-4">
                                     <span className="text-white/60 uppercase tracking-widest text-sm">{stat.label}</span>

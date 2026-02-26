@@ -13,15 +13,16 @@ export function ProjectsSection() {
     return (
         <section className="py-32 px-6 bg-black text-white relative overflow-hidden">
             <div className="container mx-auto max-w-7xl">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+                {/* Desktop Layout */}
+                <div className="hidden lg:grid grid-cols-3 gap-12 items-center">
                     {/* Left Column */}
-                    <div className="flex flex-col gap-12 lg:gap-16">
+                    <div className="flex flex-col gap-16">
                         <ProjectCard project={projects[0]} tilt="right" />
                         <ProjectCard project={projects[2]} tilt="right" />
                     </div>
 
                     {/* Middle Column (Image) */}
-                    <div className="relative h-[800px] flex items-center justify-center order-first lg:order-none mb-12 lg:mb-0">
+                    <div className="relative h-[800px] flex items-center justify-center">
                         <img
                             src={logo4D}
                             alt="Projetos 3D"
@@ -31,13 +32,41 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Right Column */}
-                    <div className="flex flex-col gap-12 lg:gap-16">
+                    <div className="flex flex-col gap-16">
                         <div className="mb-4">
                             <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
                                 Por que<br />Escolher a<br />G2?
                             </h2>
                         </div>
                         <ProjectCard project={projects[1]} tilt="left" />
+                        <ProjectCard project={projects[3]} tilt="left" />
+                    </div>
+                </div>
+
+                {/* Mobile & Tablet Layout */}
+                <div className="flex lg:hidden flex-col gap-12">
+                    {/* Title */}
+                    <div className="text-center md:text-left">
+                        <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+                            Por que <span className="text-mars-accent">Escolher</span> a G2?
+                        </h2>
+                    </div>
+
+                    {/* Image */}
+                    <div className="relative flex items-center justify-center">
+                        <img
+                            src={logo4D}
+                            alt="Projetos 3D"
+                            className="h-auto w-full max-w-[300px] md:max-w-[400px]"
+                            referrerPolicy="no-referrer"
+                        />
+                    </div>
+
+                    {/* Ordered Cards */}
+                    <div className="flex flex-col gap-8">
+                        <ProjectCard project={projects[0]} tilt="right" />
+                        <ProjectCard project={projects[1]} tilt="left" />
+                        <ProjectCard project={projects[2]} tilt="right" />
                         <ProjectCard project={projects[3]} tilt="left" />
                     </div>
                 </div>

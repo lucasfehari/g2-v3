@@ -1,11 +1,27 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import logog2 from '../assets/logog2.png';
 
-const navItems = ['Início', 'Planos', 'Parceiros', 'Clientes', 'Sobre'];
+const navItems = [
+    { name: 'Início', href: '#inicio' },
+    { name: 'Planos', href: '#planos' },
+    { name: 'Parceiros', href: '#parceiros' },
+    { name: 'Clientes', href: '#clientes' },
+    { name: 'Sobre', href: '#sobre' }
+];
 
 export function Header() {
     const [activeItem, setActiveItem] = useState('Início');
+
+    // Smooth scroll handler
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, name: string, href: string) => {
+        e.preventDefault();
+        setActiveItem(name);
+        const section = document.querySelector(href);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-6">
@@ -23,23 +39,24 @@ export function Header() {
                 {/* Navigation - Minimal Pill */}
                 <nav className="hidden md:flex items-center gap-1 glass-dark squircle-full border border-white/10 px-2 py-1.5 shadow-xl">
                     {navItems.map((item) => (
-                        <button
-                            key={item}
-                            onClick={() => setActiveItem(item)}
-                            className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300 relative ${activeItem === item
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={(e) => handleScroll(e, item.name, item.href)}
+                            className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300 relative ${activeItem === item.name
                                 ? 'text-white'
                                 : 'text-white/40 hover:text-white'
                                 }`}
                         >
-                            {activeItem === item && (
+                            {activeItem === item.name && (
                                 <motion.div
                                     layoutId="nav-pill-bg"
                                     className="absolute inset-0 bg-white/5 rounded-full"
                                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                                 />
                             )}
-                            <span className="relative z-10">{item}</span>
-                        </button>
+                            <span className="relative z-10">{item.name}</span>
+                        </a>
                     ))}
                 </nav>
 

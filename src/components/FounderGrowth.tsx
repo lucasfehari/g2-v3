@@ -36,7 +36,7 @@ export function FounderGrowth() {
     ];
 
     return (
-        <section className="py-32 px-6 bg-black text-white relative overflow-hidden">
+        <section id="sobre" className="py-32 px-6 bg-black text-white relative overflow-hidden">
             {/* Decorative Shapes */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-mars-accent/5 rounded-full blur-[120px] pointer-events-none" />
 

@@ -49,7 +49,7 @@ const plans = [
 
 export function PricingSection() {
     return (
-        <section className="py-32 px-6 bg-black text-white relative overflow-hidden">
+        <section id="planos" className="py-32 px-6 bg-black text-white relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-mars-blue/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -119,10 +119,16 @@ function PricingCard({ plan, index }: { plan: any, index: number, key?: string }
             </div>
 
             <div className="mb-8">
-                <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold tracking-tight">{plan.price}</span>
-                    <span className="text-white/50">{plan.period}</span>
-                </div>
+                <a
+                    href="https://api.whatsapp.com/send/?phone=556796956777&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-baseline gap-1 group cursor-pointer inline-flex transition-all duration-300 hover:scale-105"
+                    title="Consultar valor no WhatsApp"
+                >
+                    <span className="text-4xl font-bold tracking-tight blur-md select-none group-hover:blur-sm transition-all duration-300">{plan.price}</span>
+                    <span className="text-white/50 blur-sm select-none group-hover:blur-none transition-all duration-300">{plan.period}</span>
+                </a>
             </div>
 
             <ul className="flex flex-col gap-4 mb-10 flex-grow">
